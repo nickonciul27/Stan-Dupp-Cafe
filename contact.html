@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function handleFormSubmission(event) {
+            event.preventDefault();
+            
+            const name = document.querySelector('[name="name"]').value;
+            const email = document.querySelector('[name="email"]').value;
+            const message = document.querySelector('[name="message"]').value;
+            
+            alert("Thank you for your message! " + name + "We will get back to you shortly.");
+            
+            document.querySelector('form').reset();
+            
+        }
+    </script> 
+    </head>
+    <body>
+        <header>
+            <h1>Contact Us</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="hours.html">Hours</a>
+                <a href="location.html">Map</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+        </header>
+        
+        <section class="contact-form">
+            <form onsubmit="handleFormSubmission(event)">
+                <label>Name:</label><br>
+                <input type="text" name="name" required><br>
+                
+                <label>Email:</label><br>
+                <input type="email" name="email" required><br>
+                
+                <label>Message:</label><br>
+                <textarea name="message" rows="5" required></textarea><br>
+                
+                <button type="submit">Send</button>
+            </form>
+        </section>
+        
+        <footer>
+            <p>2025 Stan Dupp Cafe. All rights reserved</p>
+        </footer>
+    </body>
+</html>
